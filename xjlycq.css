@@ -1,0 +1,74 @@
+body{
+	overflow:hidden;
+	background-image: url(dragon.png), url(./bg.png);
+    background-position: center,center;
+    background-size: 60vh, cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+	margin: 0;
+}
+
+@media screen and (max-aspect-ratio:1/1) {/*宽度:长度  小于1*/
+	body{
+		background-size: 60vw, cover;
+	}
+}
+
+div{
+	-webkit-text-size-adjust: 100%; 
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+
+.picset{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+	opacity:1;
+	transition: opacity 1000ms;
+}
+.picset.mdown{
+	opacity:0.2;
+	transition: opacity 2500ms;
+	transition-timing-function: ease-out;
+}
+
+.picset div{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+	visibility: hidden;
+}
+
+.picset div img{
+    position: relative;
+    margin: auto;
+	height: 80vh;
+    width: 80vw;
+    max-height: 80vh;
+	max-width:80vw;
+	object-fit: contain;
+	/* visibility: hidden; */
+}
+/* .picset div.picvis img{ */
+	/* visibility: visible; */
+/* } */
+div.vis{
+	visibility: visible!important;
+}
+.countdown{
+	visibility: hidden;
+	text-align: center;
+    font-size: 10vh;
+    font-weight: bold;
+    color: #FFEB3B;
+    position: fixed;
+	top: 3vh;
+    width: 100%;
+    text-shadow: 0 0 10px #efff16, 0 0 20px #a31515, 0 0 30px red, 0 0 40px red;
+}
